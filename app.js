@@ -1,5 +1,6 @@
-const express = require("express");
-const fs = require("fs");
+import express from "express";
+import fs from "fs";
+import main from "./pingWebsite.js";
 
 const app = express();
 const port = 3000;
@@ -22,5 +23,6 @@ app.get("/ping", (req, res) => {
 });
 
 app.listen(port, () => {
+  main();
   console.log(`Server running on port ${process.env.port || port}`);
 });

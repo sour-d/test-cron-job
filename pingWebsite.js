@@ -1,5 +1,5 @@
-const axios = require("axios");
-const fs = require("fs");
+import axios from "axios";
+import fs from "fs";
 
 const pingWebsite = async (url) => {
   try {
@@ -15,6 +15,10 @@ const pingWebsite = async (url) => {
   }
 };
 
-setInterval(() => {
-  pingWebsite(process.env.URL + "/ping");
-}, 60000);
+const main = () => {
+  setInterval(() => {
+    pingWebsite(process.env.URL + "/ping");
+  }, 60000);
+};
+
+export default main;
