@@ -7,7 +7,7 @@ const pingWebsite = async (url) => {
     console.log(`Response time: ${response.headers["x-response-time"]}`);
     fs.writeFileSync(
       "file.txt",
-      `${response.data} ${Date.now().toLocaleString()}`,
+      `${response.data} ${new Date().toLocaleString()}\n`,
       { flag: "a", encoding: "utf8" }
     );
   } catch (error) {

@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/ping", (req, res) => {
+  console.log("got pinged");
   res.send("pong");
 });
 
